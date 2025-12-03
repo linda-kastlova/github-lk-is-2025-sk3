@@ -15,27 +15,29 @@ while (again == "a")
     Console.Write("Zadejte přirozené číslo v desítkové soustavě: ");
     uint input;
     while (!uint.TryParse(Console.ReadLine(), out input))
+    {
         Console.Write("Nezadali jste přirozené číslo. Zadejte přirozené číslo v desítkové soustavě znovu: ");
+    }
 
     var convertedNumbers = new uint[32];
     var converting = input;
-    
-    uint currentDigit;
-    for (currentDigit = 0; converting > 0; currentDigit++)
+
+    uint digitCount;
+    for (digitCount = 0; converting > 0; digitCount++)
     {
         var remaining = converting % 2;
         converting = (converting - remaining) / 2;
-        convertedNumbers[currentDigit] = remaining;
+        convertedNumbers[digitCount] = remaining;
 
         Console.WriteLine("Celá část = {0}; zbytek = {1}", input, remaining);
     }
 
     // Zpětný výpis pole
     Console.WriteLine("Desítkové číslo {0} ve dvojkové soustavě = ", input);
-    for (var index = currentDigit - 1; index >= 0; index--)
+    for (var index = digitCount; index > 0; index--)
     {
-        Console.Write("{0}", convertedNumbers[index]);
-    }
+        Console.WriteLine("{0}", convertedNumbers[index - 1]);
+    };
 
 
     Console.WriteLine();
