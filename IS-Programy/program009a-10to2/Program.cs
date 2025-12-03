@@ -36,7 +36,7 @@ while (again == "a")
     Console.WriteLine("Desítkové číslo {0} ve dvojkové soustavě = ", input);
     for (var index = digitCount; index > 0; index--)
     {
-        Console.WriteLine("{0}", convertedNumbers[index - 1]);
+        Console.Write("{0}", convertedNumbers[index - 1]);
     };
 
 
