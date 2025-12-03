@@ -13,28 +13,29 @@ while (again == "a")
 
     // Vstup číselné hodnoty do programu 
     Console.Write("Zadejte přirozené číslo v desítkové soustavě: ");
-    uint number10;
-    while (!uint.TryParse(Console.ReadLine(), out number10))
+    uint input;
+    while (!uint.TryParse(Console.ReadLine(), out input))
         Console.Write("Nezadali jste přirozené číslo. Zadejte přirozené číslo v desítkové soustavě znovu: ");
 
-    var mojePole = new uint[32];
-    var zálohaNumber10 = number10;
-
-    uint zbytek;
-
-    uint i;
-    for (i = 0; number10 > 0; i++)
+    var convertedNumbers = new uint[32];
+    var converting = input;
+    
+    uint currentDigit;
+    for (currentDigit = 0; converting > 0; currentDigit++)
     {
-        zbytek = number10 % 2;
-        number10 = (number10 - zbytek) / 2;
-        mojePole[i] = zbytek;
+        var remaining = converting % 2;
+        converting = (converting - remaining) / 2;
+        convertedNumbers[currentDigit] = remaining;
 
-        Console.WriteLine("Celá část = {0}; zbytek = {1}", number10, zbytek);
+        Console.WriteLine("Celá část = {0}; zbytek = {1}", input, remaining);
     }
 
     // Zpětný výpis pole
-    Console.WriteLine("Desítkové číslo {0} ve dvojkové soustavě = ", zálohaNumber10);
-    for (var j = i - 1; j >= 0; j--) Console.Write("{0}", mojePole[j]);
+    Console.WriteLine("Desítkové číslo {0} ve dvojkové soustavě = ", input);
+    for (var index = currentDigit - 1; index >= 0; index--)
+    {
+        Console.Write("{0}", convertedNumbers[index]);
+    }
 
 
     Console.WriteLine();
