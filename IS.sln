@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program008-array-reversing"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program009a-10to2", "IS-Programy\program009a-10to2\program009a-10to2.csproj", "{C3DA81C3-95D0-45EA-8259-58146A607E37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program009b-10toK", "IS-Programy\program009b-10toK\program009b-10toK.csproj", "{22DE1DB7-64BC-4B91-8AFE-D24F7E9C8379}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,6 +98,10 @@ Global
 		{C3DA81C3-95D0-45EA-8259-58146A607E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3DA81C3-95D0-45EA-8259-58146A607E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3DA81C3-95D0-45EA-8259-58146A607E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22DE1DB7-64BC-4B91-8AFE-D24F7E9C8379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DE1DB7-64BC-4B91-8AFE-D24F7E9C8379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DE1DB7-64BC-4B91-8AFE-D24F7E9C8379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DE1DB7-64BC-4B91-8AFE-D24F7E9C8379}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
