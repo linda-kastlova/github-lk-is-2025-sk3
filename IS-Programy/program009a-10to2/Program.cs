@@ -37,7 +37,7 @@ while (again == "a")
     for (var index = digitCount; index > 0; index--)
     {
         Console.Write("{0}", convertedNumbers[index - 1]);
-    };
+    }
 
 
     Console.WriteLine();
