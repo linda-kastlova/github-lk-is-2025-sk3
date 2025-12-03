@@ -1,4 +1,4 @@
-﻿string again = "a";
+﻿var again = "a";
 while (again == "a")
 {
     Console.Clear();
@@ -10,35 +10,28 @@ while (again == "a")
     Console.WriteLine("*******************************");
     Console.WriteLine();
 
-    
+
     Console.Write("Zadejte šířku obdélníku (celé číslo): ");
     int width;
     while (!int.TryParse(Console.ReadLine(), out width))
-    {
         Console.Write("Nezadali jste celé číslo. Zadejte šířku odbélníku znovu: ");
-    }
 
     Console.Write("Zadejte výšku obdélníku (celé číslo): ");
     int height;
     while (!int.TryParse(Console.ReadLine(), out height))
-    {
         Console.Write("Nezadali jste celé číslo. Zadejte výšku odbélníku znovu: ");
-    }
-    
-    
-    for(int i = 1; i <= height; i++) {
-        for (int j = 1; j <= width; j++)
+
+
+    for (var i = 1; i <= height; i++)
+    {
+        for (var j = 1; j <= width; j++)
         {
             Console.Write("* ");
-            System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(100));
+            Thread.Sleep(TimeSpan.FromMilliseconds(100));
         }
+
         Console.WriteLine();
     }
-
-
-
-
-
 
 
     Console.WriteLine();
