@@ -5,7 +5,7 @@ while (again == "a")
 {
     Console.Clear();
     Console.WriteLine("*****************************************");
-    Console.WriteLine("********* Vykreslování domečku **********");
+    Console.WriteLine("********** Vykreslování šipky ***********");
     Console.WriteLine("*****************************************");
     Console.WriteLine("************* Linda Kastlová ************");
     Console.WriteLine("*************** 03.12.2025 **************");
@@ -38,29 +38,21 @@ while (again == "a")
     }
     
     int average = (int) Math.Round((float) suma / input);
-
-    int a = average;
-    int b = (int) Math.Round((decimal) a / 2);
-    
-    Console.WriteLine();
-    Console.WriteLine("===========================================");
-    Console.WriteLine("Rozměr stěn domečku {0}, výška střechy {1}", a, b);
-
-    int gap = Math.Max((int)Math.Round((decimal)b / 2), 2);
-    
-    
-    int width = a;
-    int height = b;
+    int width = average;
+    int height = width;
+    int gap = Math.Max((int)Math.Round((decimal) height / 4), 2);
+    int arrowWidth = width + gap;
+    int arrowHeight = (int) Math.Round((decimal) arrowWidth / 2);
     
         
-    for (int row = 0; row < height; row++)
+    for (int row = 0; row < arrowHeight; row++)
     {
-        int left = height - (row + 1);
-        int right = height - (row + 1);
+        int left = arrowHeight - (row + 1);
+        int right = arrowHeight - (row + 1);
 
-        for (int column = 0; column < width; column++)
+        for (int column = 0; column < arrowWidth; column++)
         {
-            if (column < height)
+            if (column < arrowHeight)
             {
                 if (column + 1 > left)
                 {
@@ -73,7 +65,7 @@ while (again == "a")
             }
             else
             {
-                if (column < width - right)
+                if (column < arrowWidth - right)
                 {
                     Console.Write("* ");
                 }
@@ -85,15 +77,12 @@ while (again == "a")
         }
         Console.WriteLine();
     }
-
-    height = a;
     
     for (int row = 0; row < height; row++)
     {
-        for (int column = 0; column < width; column++)
-        if (row == 0 || row >= height - 1)  
-                Console.Write("* ");
-            else if(column == 0 || column == width - 1)
+        for (int column = 0; column < arrowWidth; column++)
+        
+            if(column >= gap && column < width)
                 Console.Write("* ");
             else
                 Console.Write("  ");
