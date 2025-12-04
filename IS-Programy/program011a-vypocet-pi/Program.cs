@@ -3,7 +3,7 @@ while (again == "a")
 {
     Console.Clear();
     Console.WriteLine("*******************************");
-    Console.WriteLine("****** Konvergetní řady *******");
+    Console.WriteLine("********* Výpočet PI **********");
     Console.WriteLine("*******************************");
     Console.WriteLine("******** Linda Kastlová *******");
     Console.WriteLine("********** 04.12.2025 *********");
