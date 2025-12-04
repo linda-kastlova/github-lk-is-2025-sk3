@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program011a-vypocet-pi", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program012a-intervaly", "IS-Programy\program012a-intervaly\program012a-intervaly.csproj", "{FDF4C3B6-2619-496B-8067-798A98E33BAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program013a-NSD-NSN", "IS-Programy\program013a-NSD-NSN\program013a-NSD-NSN.csproj", "{EE27FBF0-65E5-408A-8D81-52CC723ADF17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,6 +128,10 @@ Global
 		{FDF4C3B6-2619-496B-8067-798A98E33BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDF4C3B6-2619-496B-8067-798A98E33BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDF4C3B6-2619-496B-8067-798A98E33BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE27FBF0-65E5-408A-8D81-52CC723ADF17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE27FBF0-65E5-408A-8D81-52CC723ADF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE27FBF0-65E5-408A-8D81-52CC723ADF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE27FBF0-65E5-408A-8D81-52CC723ADF17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
