@@ -1,4 +1,5 @@
-﻿
+﻿bool debug = false;
+
 string again = "a";
 while(again == "a") 
 {
@@ -11,69 +12,92 @@ while(again == "a")
             Console.WriteLine();
 
             
-            Console.Write("Zadejte počet generovaných čísel (celé číslo): ");
-            int number;
-            while(!int.TryParse(Console.ReadLine(), out number)) {
-                Console.Write("Nezadali jste celé číslo. Zadejte počet generovaných čísel znovu: ");
-            }
-
-            Console.Write("Zadejte dolní mez (celé číslo): ");
+            int totalNumbers;
             int lowerBound;
-            while(!int.TryParse(Console.ReadLine(), out lowerBound)) 
-            {
-                Console.Write("Nezadali jste celé číslo. Zadejte dolní mez znovu: ");
-            }
-
-            Console.Write("Zadejte horní mez (celé číslo): ");
             int upperBound;
-            while(!int.TryParse(Console.ReadLine(), out upperBound)) 
+            int intervalCount;
+    
+            
+            if (debug)
             {
-                Console.Write("Nezadali jste celé číslo. Zadejte horní mez znovu: ");
+                totalNumbers = 10;
+                lowerBound = 0;
+                upperBound = 10;
+                intervalCount = 2;
             }
+            else
+            {
+                Console.Write("Zadejte počet generovaných čísel (celé číslo): ");
+                while(!int.TryParse(Console.ReadLine(), out totalNumbers)) {
+                    Console.Write("Nezadali jste celé číslo. Zadejte počet generovaných čísel znovu: ");
+                }   
+                
+                Console.Write("Zadejte dolní mez (celé číslo): ");
+                while(!int.TryParse(Console.ReadLine(), out lowerBound)) 
+                {
+                    Console.Write("Nezadali jste celé číslo. Zadejte dolní mez znovu: ");
+                }
 
+                Console.Write("Zadejte horní mez (celé číslo): ");
+                while(!int.TryParse(Console.ReadLine(), out upperBound)) 
+                {
+                    Console.Write("Nezadali jste celé číslo. Zadejte horní mez znovu: ");
+                }
+                
+                Console.Write("Zadejte počet intervalů, do kterých se bude základní interval dělit: ");
+                while(!int.TryParse(Console.ReadLine(), out intervalCount))
+                {
+                    Console.Write("Nezadali jste celé číslo. Zadejte počet intervalů znovu: ");
+                }
+            }
+            
             Console.WriteLine();
             Console.WriteLine("==========================================");
             Console.WriteLine("Zadané hodnoty:");
-            Console.WriteLine("Počet čísel: {0}; dolní mez: {1}; horní mez: {2}", number, lowerBound, upperBound);
+            Console.WriteLine("Počet čísel: {0}; dolní mez: {1}; horní mez: {2}; počet intervalů: {3}", totalNumbers, lowerBound, upperBound,  intervalCount);
             Console.WriteLine("==========================================");
             Console.WriteLine();
 
+            // generujeme čísla
             //deklarace pole    
-            int[] myArray = new int[number];
-
+            int[] generatedNumbers = new int[totalNumbers];
             Random randomNumber = new Random();
 
-            int interval1=0;
-            int interval2=0;
-            int interval3=0;
-            int interval4=0;
-
-            Console.WriteLine("\n\nNáhodná čísla:");
-            for(int i=0; i<number; i++) 
+            for (int i = 0; i < totalNumbers; i++)
             {
-                myArray[i] = randomNumber.Next(lowerBound, upperBound+1);
-                Console.Write("{0}; ", myArray[i]);
+                generatedNumbers[i] = randomNumber.Next(lowerBound, upperBound+1);
+            }
+            
+    
+            // rozdělujeme do skupinek
+            
+            int[] intervalFounds = new int[intervalCount];
+            int intervalNumbers = (int) Math.Round((double) upperBound / (double) intervalCount);
 
-                if(myArray[i]<= (0.25 * upperBound)) 
+            for (int number = 0; number < totalNumbers; number++)
+            {
+                for (int interval = 0; interval < intervalCount; interval++)
                 {
-                    interval1++;
-                }
-                else if(myArray[i] <= (0.5 * upperBound)) 
-                {
-                    interval2++;
-                }
-                else if(myArray[i] <= (0.75 * upperBound)) 
-                {
-                    interval3++;
-                }
-                else
-                    interval4++; 
-           }
+                    int inervalStart = (intervalNumbers * interval) + (interval > 0 ? 1 : 0);
+                    int inervalEnd = Math.Min(intervalNumbers * (interval + 1), upperBound);
 
-            Console.WriteLine("\nInterval <{0}; {1}>: {2}", lowerBound, 0.25 * upperBound, interval1);
-            Console.WriteLine("Interval <{0}; {1}>: {2}", 0.25 * upperBound + 1, 0.5 * upperBound, interval2);
-            Console.WriteLine("Interval <{0}; {1}>: {2}", 0.5 * upperBound + 1, 0.75 * upperBound, interval3);
-            Console.WriteLine("Interval <{0}; {1}>: {2}", 0.75 * upperBound  + 1, upperBound, interval4);
+                    if (number >= inervalStart && number <= inervalEnd)
+                    {   
+                        intervalFounds[interval]++;
+                        
+                        Console.WriteLine($"Číslo {number} patří do intervalu <{inervalStart}; {inervalEnd}>!");
+                    }
+                }
+            }
+
+            for (int interval = 0; interval < intervalCount; interval++)
+            {
+                int inervalStart = (intervalNumbers * interval) + (interval > 0 ? 1 : 0);
+                int inervalEnd = Math.Min(intervalNumbers * (interval + 1), upperBound);
+                
+                
+                Console.WriteLine($"V intervalu <{inervalStart}; {inervalEnd}> je {intervalFounds[interval]} čísel!");
+            }
 
             Console.WriteLine();
             Console.WriteLine("Pro opakování programu stiskněte klávesu A");
