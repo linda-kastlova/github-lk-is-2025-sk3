@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program012a-intervaly", "IS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program013a-NSD-NSN", "IS-Programy\program013a-NSD-NSN\program013a-NSD-NSN.csproj", "{EE27FBF0-65E5-408A-8D81-52CC723ADF17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program014a-kombinovana-uloha", "IS-Programy\program014a-kombinovana-uloha\program014a-kombinovana-uloha.csproj", "{AD2EFD66-FD41-428A-B204-9DFD92D90D00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -132,6 +134,10 @@ Global
 		{EE27FBF0-65E5-408A-8D81-52CC723ADF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE27FBF0-65E5-408A-8D81-52CC723ADF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE27FBF0-65E5-408A-8D81-52CC723ADF17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD2EFD66-FD41-428A-B204-9DFD92D90D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD2EFD66-FD41-428A-B204-9DFD92D90D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD2EFD66-FD41-428A-B204-9DFD92D90D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD2EFD66-FD41-428A-B204-9DFD92D90D00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
