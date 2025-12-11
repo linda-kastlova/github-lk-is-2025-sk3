@@ -36,11 +36,8 @@ while (again == "a")
     
     var randomNumbers = new int[input];
     var myRandNumber = new Random();
-
-
     Console.WriteLine();
     Console.WriteLine("Náhodná čísla: ");
-
     
 
     for (var i = 0; i < input; i++)
