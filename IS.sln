@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program013a-NSD-NSN", "IS-P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program014a-kombinovana-uloha", "IS-Programy\program014a-kombinovana-uloha\program014a-kombinovana-uloha.csproj", "{AD2EFD66-FD41-428A-B204-9DFD92D90D00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program014a-kombinovana-uloha-druha-varianta", "IS-Programy\program014a-kombinovana-uloha-druha-varianta\program014a-kombinovana-uloha-druha-varianta.csproj", "{7F27A6C2-4A04-4AF3-AF64-0A17628A0C9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -138,6 +140,10 @@ Global
 		{AD2EFD66-FD41-428A-B204-9DFD92D90D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD2EFD66-FD41-428A-B204-9DFD92D90D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD2EFD66-FD41-428A-B204-9DFD92D90D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F27A6C2-4A04-4AF3-AF64-0A17628A0C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F27A6C2-4A04-4AF3-AF64-0A17628A0C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F27A6C2-4A04-4AF3-AF64-0A17628A0C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F27A6C2-4A04-4AF3-AF64-0A17628A0C9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
