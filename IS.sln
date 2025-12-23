@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program014a-kombinovana-ulo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program013a-NSD-NSN-druha-varianta", "IS-Programy\program013a-NSD-NSN-druha-varianta\program013a-NSD-NSN-druha-varianta.csproj", "{7F27A6C2-4A04-4AF3-AF64-0A17628A0C9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program004b-pravouhly-trojuhelnik", "IS-Programy\program004b-pravouhly-trojuhelnik\program004b-pravouhly-trojuhelnik.csproj", "{27B5974D-7E15-43B0-BFBA-E1ACD749DBE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,6 +146,10 @@ Global
 		{7F27A6C2-4A04-4AF3-AF64-0A17628A0C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F27A6C2-4A04-4AF3-AF64-0A17628A0C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F27A6C2-4A04-4AF3-AF64-0A17628A0C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B5974D-7E15-43B0-BFBA-E1ACD749DBE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B5974D-7E15-43B0-BFBA-E1ACD749DBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B5974D-7E15-43B0-BFBA-E1ACD749DBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B5974D-7E15-43B0-BFBA-E1ACD749DBE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
