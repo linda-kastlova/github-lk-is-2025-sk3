@@ -48,6 +48,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program013a-NSD-NSN-druha-v
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program004b-pravouhly-trojuhelnik", "IS-Programy\program004b-pravouhly-trojuhelnik\program004b-pravouhly-trojuhelnik.csproj", "{27B5974D-7E15-43B0-BFBA-E1ACD749DBE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program004c-pismeno-z", "IS-Programy\program004c-pismeno-z\program004c-pismeno-z.csproj", "{AE2145BC-86C2-488B-A7C1-B0B1A18E00DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -150,6 +152,10 @@ Global
 		{27B5974D-7E15-43B0-BFBA-E1ACD749DBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27B5974D-7E15-43B0-BFBA-E1ACD749DBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27B5974D-7E15-43B0-BFBA-E1ACD749DBE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE2145BC-86C2-488B-A7C1-B0B1A18E00DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE2145BC-86C2-488B-A7C1-B0B1A18E00DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE2145BC-86C2-488B-A7C1-B0B1A18E00DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE2145BC-86C2-488B-A7C1-B0B1A18E00DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
