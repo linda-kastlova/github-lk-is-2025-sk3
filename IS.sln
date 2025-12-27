@@ -50,7 +50,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program004b-pravouhly-troju
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program004c-pismeno-z", "IS-Programy\program004c-pismeno-z\program004c-pismeno-z.csproj", "{AE2145BC-86C2-488B-A7C1-B0B1A18E00DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program004c-druhy-obrazec", "IS-Programy\program004c-druhy-obrazec\program004c-druhy-obrazec.csproj", "{C72D0BBB-B6D6-47F4-B331-31B9DB83C705}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program004d-druhy-obrazec", "IS-Programy\program004d-druhy-obrazec\program004d-druhy-obrazec.csproj", "{C72D0BBB-B6D6-47F4-B331-31B9DB83C705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program004e-treti-obrazec", "IS-Programy\program004e-treti-obrazec\program004e-treti-obrazec.csproj", "{2BA0A4DE-587C-4F2D-A2F2-3D49133FDD86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -162,6 +164,10 @@ Global
 		{C72D0BBB-B6D6-47F4-B331-31B9DB83C705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C72D0BBB-B6D6-47F4-B331-31B9DB83C705}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C72D0BBB-B6D6-47F4-B331-31B9DB83C705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA0A4DE-587C-4F2D-A2F2-3D49133FDD86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA0A4DE-587C-4F2D-A2F2-3D49133FDD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA0A4DE-587C-4F2D-A2F2-3D49133FDD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA0A4DE-587C-4F2D-A2F2-3D49133FDD86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
