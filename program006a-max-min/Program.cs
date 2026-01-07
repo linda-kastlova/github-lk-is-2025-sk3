@@ -55,30 +55,73 @@ while (again == "a")
     // Hledání maxima, pozice maxima, minima a pozice minima
     var max = myRandNumbers[0];
     var min = myRandNumbers[0];
-    var posMax = 0;
-    var posMin = 0;
+    
+    var maxHits = 0;
+    var minHits = 0;
+    
+    var posMax = new int[n];
+    var posMin = new int[n];
 
     for (var i = 1; i < n; i++)
     {
-        if (myRandNumbers[i] > max)
+        var currentNumber = myRandNumbers[i];
+        
+        if (currentNumber > max)
         {
-            max = myRandNumbers[i];
-            posMax = i;
+            posMax = new int[n];
+            maxHits = 0;
+            
+            max = currentNumber;
+            
+            posMax[maxHits] = i;
+            maxHits++;
+        } else if (currentNumber == max)
+        {
+            posMax[maxHits] = i;
+            maxHits++;
         }
 
-        if (myRandNumbers[i] < min)
+        if (currentNumber < min)
         {
-            min = myRandNumbers[i];
-            posMin = i;
+            posMin = new int[n];
+            minHits = 0;
+            
+            min = currentNumber;
+            
+            posMin[minHits] = i;
+            minHits++;
+        }else if (currentNumber == min)
+        {
+            posMin[minHits] = i;
+            minHits++;
         }
     }
-
+    
     Console.WriteLine();
     Console.WriteLine("===========================================");
-    Console.WriteLine($"Maximum: {max}");
-    Console.WriteLine($"Pozice maxima: {posMax}");
-    Console.WriteLine($"Minimum: {min}");
-    Console.WriteLine($"Pozice minima: {posMin}");
+    
+    // maximum
+    Console.WriteLine($"Maximum: {max}, nalezeno {maxHits}x");
+    Console.WriteLine($"Pozice (pocitano od 0):");
+    Console.Write(" - ");
+    for (int i = 0; i < maxHits; i++)
+    {
+        Console.Write($"{posMax[i]}; ");
+    }
+    Console.WriteLine();
+    
+    Console.WriteLine();
+    
+    // minimum
+    Console.WriteLine($"Minimum: {min}, nalezeno {minHits}x");
+    Console.WriteLine($"Pozice (pocitano od 0):");
+    Console.Write(" - ");
+    for (int i = 0; i < minHits; i++)
+    {
+        Console.Write($"{posMin[i]}; ");
+    }
+    Console.WriteLine();
+    
     Console.WriteLine("===========================================");
 
     // Vykreslení přesýpacích hodin
@@ -121,7 +164,7 @@ while (again == "a")
             // Vykreslení správného počtu hvězdiček pro každý řádek
             // st - stars (1 hvězdička)
             for (var st = 1; st < stars; st++)
-                Console.Write("*");
+                Console.Write("* ");
             Console.WriteLine();
         }
 
