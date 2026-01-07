@@ -47,6 +47,65 @@ while (again == "a")
 
     }
 
+    var max = randomNumbers[0];
+    var min = randomNumbers[0];
+    
+    var maxHits = 0;
+    var minHits = 0;
+    
+    var maxPositions = new int[input];
+    var minPositions = new int[input];
+    
+    for (var i = 1; i < input; i++)
+    {
+        var currentNumber = randomNumbers[i];
+        
+        if (currentNumber > max)
+        {
+            maxPositions = new int[input];
+            maxHits = 0;
+            
+            max = currentNumber;
+            
+            maxPositions[maxHits] = i;
+            maxHits++;
+        } else if (currentNumber == max)
+        {
+            maxPositions[maxHits] = i;
+            maxHits++;
+        }
+
+        if (currentNumber < min)
+        {
+            minPositions = new int[input];
+            minHits = 0;
+            
+            min = currentNumber;
+            
+            minPositions[minHits] = i;
+            minHits++;
+        }else if (currentNumber == min)
+        {
+            minPositions[minHits] = i;
+            minHits++;
+        }
+    }
+    
+    Console.WriteLine();
+    Console.WriteLine("===========================================");
+    Console.WriteLine($"Maximum: {max}, všechny pozice maxima: ");
+    for (int i = 0; i < maxHits; i++)
+    {
+        Console.Write($"{maxPositions[i]}; ");
+    }
+    Console.WriteLine();
+    Console.WriteLine($"Minimum: {min}, všechny pozice minima: ");
+    for (int i = 0; i < minHits; i++)
+    {
+        Console.Write($"{minPositions[i]}; ");
+    }
+    
+    
     for (var i = 0; i < input - 1; i++)
     for (var j = 0; j < input - i - 1; j++)
     {
@@ -63,17 +122,39 @@ while (again == "a")
     Console.WriteLine("Seřazená pole:");
     for (var i = 0; i < input; i++) Console.Write("{0}; ", randomNumbers[i]);
 
+    int uniqueCount = 0;
+    int lastValue = int.MinValue;
+    int secondBiggest = 0;
+    int thirdBiggest = 0;
+    int fourthBiggest = 0;
+
+    for (int i = 0; i < input; i++)
+    {
+        if(randomNumbers[i] != lastValue)
+        {
+            uniqueCount++;
+            lastValue = randomNumbers[i];
+
+            if (uniqueCount == 2)
+            {
+                secondBiggest = randomNumbers[i];
+            }
+            if (uniqueCount == 3)
+            {
+                thirdBiggest = randomNumbers[i];
+            }
+            if (uniqueCount == 4)
+            {
+                fourthBiggest = randomNumbers[i];
+            }
+        }
+    }
    
     Console.WriteLine();
-    
-    var secondBiggest = randomNumbers[1];
+    Console.WriteLine("===========================================");
     Console.WriteLine("Druhé největší číslo: {0} ",  secondBiggest);
-
-    var thridBiggest = randomNumbers[2];
-    Console.WriteLine("Třetí největší číslo: {0}",  thridBiggest);
-    
-    var fourthBiggest = randomNumbers[3];
-    Console.Write("Čtvrté největší číslo: {0}",  fourthBiggest);
+    Console.WriteLine("Třetí největší číslo: {0}",  thirdBiggest);
+    Console.WriteLine("Čtvrté největší číslo: {0}",  fourthBiggest);
     
     Console.WriteLine();
     
@@ -84,16 +165,91 @@ while (again == "a")
     if (isEven)
     {
         var first = randomNumbers[half];
-        var second = randomNumbers[half - 1];
+        var  secondNumberMedian = randomNumbers[half - 1];
         
-        median = (int) Math.Round(((double)first + second) / 2);
+        median = (int) Math.Round(((double)first +  secondNumberMedian) / 2);
     }
     else
     {
         median =  randomNumbers[half - 1];
     }
     
-    Console.WriteLine("Medián je {0} z celkového {1} počtu čísel {2}", median, isEven ? "sudého" : "lichého", input);
+    Console.WriteLine();
+    Console.WriteLine("===========================================");
+    Console.WriteLine("Medián je: {0}", median);
+
+    string binary = "";
+    int transferredNumber = fourthBiggest;
+
+    if (transferredNumber == 0) binary = "0";
+    while (transferredNumber > 0)
+    {
+        binary = (transferredNumber % 2) + binary;
+        transferredNumber /= 2;
+    }
+    
+    Console.WriteLine();
+    Console.WriteLine("===========================================");
+    Console.WriteLine($"Čtvrté největší číslo v binární soustavě: {fourthBiggest} = {binary}");
+    
+    Console.WriteLine();
+    Console.WriteLine("===========================================");
+
+    int height = median;
+    int width = thirdBiggest;
+    
+    Console.WriteLine($"Obrazec - výška = medián {height}; šířka = třetí největší číslo {width}");
+    Console.WriteLine();
+
+    int part = height / 3;
+    int evenWidth;
+    int indent;
+
+    if (width % 2 == 0)
+    {
+        evenWidth = 2;
+        indent = (width - 2) / 2;
+    }
+    else
+    {
+        evenWidth = 3;
+        indent = (width - 3) / 2;
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        if (i < part)
+        {
+            for(int space = 0; space < indent; space++)
+                Console.Write("  ");
+            
+            for(int star = 0; star < evenWidth; star++)
+                Console.Write("* ");
+            
+            Console.WriteLine();
+        }
+        
+        else if (i < height - part)
+        {
+            for(int row = 0; row < width; row++)
+                Console.Write("* ");
+            
+            Console.WriteLine();
+            
+        }
+        else
+        {
+            for(int space = 0; space < indent; space++)
+                Console.Write("  ");
+            
+            for(int star = 0; star < evenWidth; star++)
+                Console.Write("* ");
+            
+            Console.WriteLine();
+            
+        }
+    }
+    
     
     Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a");
